@@ -10,7 +10,8 @@
   - eeg.json of every subject: key MiscChannelCount (not a BIDS key) renamed to MISCChannelCount.
   - Each subject's _electrodes.json held coordinate-system keys (EEGCoordinateSystem RAS, mm), not
     column descriptions: moved unchanged to sub-XX/eeg/sub-XX_coordsystem.json (BIDS requires it with
-    electrodes.tsv). Identical in all 44 subjects.
+    electrodes.tsv). Identical in all 44 subjects. EEGCoordinateSystem "RAS" (not a BIDS
+    keyword) written "Other"; the existing EEGCoordinateSystemDescription defines it (RAS, mm).
   - participants.tsv: participant_id written as the subject folders (sub-01, was sub-1); study_date and
     DOB in ISO 8601 (YYYY-MM-DD, were dd/mm/yyyy); trailing empty row removed. participants.json updated.
   - electrodes.tsv impedance 'not' (sub-01 4 rows, sub-18 12, sub-25 32) written n/a.
